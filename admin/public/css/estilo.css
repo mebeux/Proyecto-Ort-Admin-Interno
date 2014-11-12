@@ -156,7 +156,6 @@ body {
 
 a.btn {
     text-decoration:none;
-    /*padding:3px 10px;*/
     display:block;
     text-align:center;
 }
@@ -168,7 +167,7 @@ a.btn {
 }
 
 .btn-gris {
-	border:1px solid LightGray;
+    border:1px solid LightGray;
     background:LightGray;
     color:black;
 }
@@ -229,6 +228,7 @@ a.btn {
     /*font-weight: bold;*/
 }
 
+
 .tbl tr.fila {
     border-bottom:1px solid LightGray;
    
@@ -254,6 +254,22 @@ a.btn {
 }
 
 .tbl-acordeon .encabezado-anio a {
+    color:#696969;
+    /*font-weight: bold;*/
+}
+
+.tbl-acordeon tr.encabezado-anios {
+    background:#F5F5F5;
+    color:#696969;
+    border-bottom:1px solid black;
+   
+}
+
+.tbl-acordeon .encabezado-anios td {
+    padding:10px 10px;
+}
+
+.tbl-acordeon .encabezado-anios a {
     color:#696969;
     /*font-weight: bold;*/
 }
@@ -347,7 +363,7 @@ a.btn {
 .dialogo {
     position:fixed;
     width:440px;
-    height:820px;
+    //height:820px;
     display:none;
     background:white;
     z-index:9999;
@@ -374,3 +390,37 @@ a.btn {
     border-radius:10px;
 }
 
+
+#form-login {
+    //margin-top:200px;
+    border:1px solid black;
+    border-radius:5px;
+    margin: 150px auto;
+    width:250px;
+}
+
+#form-login #form-titulo {
+    background:black;
+    color:white;
+    text-align:center;
+    font-weight: bold;
+    padding:5px;
+    margin-bottom:15px;
+}
+
+#form-login input[type="text"], 
+#form-login input[type="password"] {
+    width:240px;
+    border:1px solid darkgray;
+    border-radius:5px;
+    margin:2px auto;
+}
+
+#form-login #botones {
+   margin:15px 0;
+}
+
+#form-login #botones input {
+   // width:140px;
+    display:inline;
+}

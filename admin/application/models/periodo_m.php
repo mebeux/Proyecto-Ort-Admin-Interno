@@ -61,13 +61,23 @@ class Periodo_m extends CI_Model {
                     unidad_proyecto,
                     practica_profesional,
                     periodo_actual as actual
-                    FROM  periodos;";
+                    FROM  periodos
+                    ORDER BY anio_lectivo, periodo desc;";
 
         $cmd = $this->db->query($sql);
         if ($cmd->num_rows > 0) {
             return $cmd->result();
         }
         return NULL;
+    }
+    
+     public function get_anios(){
+        $param=array();
+        $sql="SELECT distinct anio_lectivo  FROM periodos ORDER BY anio_lectivo desc;";
+        $cmd=$this->db->query($sql,$param);
+         if ($cmd->num_rows>0) {
+             return $cmd->result();
+         }
     }
 
     public function get_asignaturas() {

@@ -21,29 +21,16 @@
                     $fila = "<tr class=\"fila $asignatura->anio_asignatura\" id=\"" . $asignatura->id_asignatura . "\">
                               <td>". $asignatura->nombre . "</td><td  class=\"gris\">$tipo</td>";
                     
-                    $fila .="<td><a href=\"#\" class=\"aImg\" 
+                    $fila .="<td>
+                             <img  src=\"" . base_url() . "public/img/editarNaranja.png\">
+                             <a href=\"#\" class=\"aImg\" 
                              data-valor=\"" . $asignatura->id_asignatura . "\">
-                             <img  src=\"" . base_url() . "public/img/search.png\"></a></td></tr>\n";
+                             <img  src=\"" . base_url() . "public/img/verNaranja.png\"></a>
+                            </td></tr>\n";
                     
                     echo $fila;
           
-                    /*
-                    
-                    echo "<tr class=\"formulario oculto\" data-anio=\"" . $i . "\" id=\"frm" . $asignatura->id_asignatura . "\>"
-                    . "<td colspan=\"3\">";
-
-                    echo "<div colspan=\"3\" class=\"form\">"
-                    . "<p><label>Nombre:</label>"
-                            . "<input type=\"text\" value=\"" . $asignatura->nombre . "\" name=\"nombre\" /></p>"
-                    . "<p><label>Previas:</label></p>"
-                    . "<table  id=\"tab" . $asignatura->id_asignatura . "\" class=\" ancho1\" >"
-                    . "</table>"
-                    . "<p><label></label><input type=\"button\" class=\"btn\" value=\"modificar\" /><input type=\"button\" class=\"btn-gris\" value=\"quitar\" /></p>"
-                    . "</div>"
-                    . "</td></tr>\n";
-
-*/
-
+     
                 }
             }
         }

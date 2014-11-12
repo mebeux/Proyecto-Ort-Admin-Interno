@@ -1,5 +1,4 @@
-
-   $(document).ready(function() {
+$(document).ready(function() {
        iniciar();
    });
 function iniciar() {
@@ -12,7 +11,7 @@ function buscarAsignatura() {
        var id=$(this).attr("data-valor");
        var plan = $("#id_plan").val();
 
-       var sitio = $("#urlBase").val()+"asignatura/ver_por_plan/"+id+"/"+plan+"/2";
+       var sitio = $("#urlBase").val()+"index.php/asignatura/ver_por_plan/"+id+"/"+plan+"/2";
 
         $.ajax({
             url:sitio,

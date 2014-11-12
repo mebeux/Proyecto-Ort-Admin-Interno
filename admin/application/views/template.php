@@ -7,10 +7,9 @@ if (isset($menu)) {
 }
 
 if (isset($vista)) {
-    
-    $this->load->view($vista[0]);        
+
+    $this->load->view($vista[0]);
 }
 
 $this->load->view("includes/footer.php");
-
 ?>

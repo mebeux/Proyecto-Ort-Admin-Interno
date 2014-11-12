@@ -5,6 +5,7 @@ class Periodo extends CI_Controller {
    public function index() {
         $this->load->model("periodo_m");
         $data["periodos"] = $this->periodo_m->get_todos();
+        $data["anios"]=$this->periodo_m->get_anios();
         $data["actual"]=$this->periodo_m->get_actual();
         $data["vista"] = array("periodos/index", "periodos");
         $data["menu"] = array("periodos/menu", "inicio");

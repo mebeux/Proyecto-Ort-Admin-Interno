@@ -5,7 +5,7 @@ $(document).ready(function() {
     $("#btn-modal").click(mostrarModal)
     $(".dialogo .cerrar").click(cerrarModal);
     $("#mascara").click(cerrarModal2);
-
+   $(".tbl-acordeon .encabezado-anios a").click(expandirFilasAniosPeriodo);
     $(".tbl-acordeon .encabezado a").click(expandirFilasAnios);
      $(".tbl-acordeon .encabezado-anio a").click(expandirFilas);
       $(".tbl-acordeon .encabezado-anioplan a").click(expandirFilas);
@@ -85,6 +85,22 @@ function expandirFilasAnios() {
             cerrarFilas(ayp);
         }
          }
+    });
+}
+function expandirFilasAniosPeriodo() {
+
+    var anio = $(this).attr("data-valor");
+
+    $(".fila." + anio).each(function() {
+        if ($(this).css("display") == "none") {
+               $(this).show();
+            if ($(this).attr("data-actual") == 1) {
+           $(this).css('background-color', '#484848');
+           $(this).css('color', 'white');
+        }
+        } else {
+            $(this).hide();
+        }
     });
 }
 function cerrarFilas(ayp) {

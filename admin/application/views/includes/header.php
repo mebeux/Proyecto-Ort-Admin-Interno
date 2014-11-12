@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf8" />
+        <title>Escuela Universitaria Centro de Diseño - Bedelía</title>
 	<script type="text/javascript" language="Javascript" src="<?php echo base_url()?>public/js/jquery.js"></script>
 	<script type="text/javascript" language="Javascript" src="<?php echo base_url()?>public/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" language="Javascript" src="<?php echo base_url()?>public/js/estilo.js"></script>
@@ -39,7 +40,7 @@
 			<li <?php if ($op == "previas") echo "class=\"active\""; 
                                     echo ">".anchor("previa/index","Previas"); ?></li>
 			<li <?php if ($op == "salir") echo "class=\"active\""; ?>>
-                            <a href="#">Salir</a></li>
+                            <?php  echo anchor("login/logout","Salir"); ?>
 		</ul>
 </nav>
 </div>
